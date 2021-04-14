@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibVLC_VideoView_Bug_Repro", "LibVLC_VideoView_Bug_Repro\LibVLC_VideoView_Bug_Repro.csproj", "{222597C1-294F-437E-AA18-63C0798459D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{222597C1-294F-437E-AA18-63C0798459D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{222597C1-294F-437E-AA18-63C0798459D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{222597C1-294F-437E-AA18-63C0798459D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{222597C1-294F-437E-AA18-63C0798459D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2B0459A-DE34-4931-9189-F1BD4C89F3B1}
+	EndGlobalSection
+EndGlobal

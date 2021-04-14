@@ -1,0 +1,78 @@
+<Window x:Class="LibVLC_VideoView_Bug_Repro.Views.MainWindow"
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vlcSharp="clr-namespace:LibVLCSharp.Avalonia;assembly=LibVLCSharp.Avalonia"
+        xmlns:viewModels="clr-namespace:LibVLC_VideoView_Bug_Repro.ViewModels;assembly=LibVLC_VideoView_Bug_Repro"
+        mc:Ignorable="d" 
+        d:DesignWidth="800"
+        d:DesignHeight="450"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="LibVLC_ViewView_Bug_Repro">
+
+    <Design.DataContext>
+      <viewModels:MainWindowViewModel />
+    </Design.DataContext>
+
+    <Grid x:Name="TheGrid">
+
+      <Grid.RowDefinitions>
+        <RowDefinition Height="50"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+      
+      <Button Command="{Binding StartCommand}"
+              CommandParameter="{Binding ElementName=TheGrid}"
+              Content="Start Command 2"
+              HorizontalContentAlignment="Center"
+              VerticalContentAlignment="Center"
+              VerticalAlignment="Center"
+              HorizontalAlignment="Center"
+              Height="30"
+              Grid.Row="0"
+              Grid.Column="0"
+              Grid.ColumnSpan="3" />
+      
+      <vlcSharp:VideoView x:Name="VideoView0"
+          MediaPlayer="{Binding MediaPlayerZero, Mode=TwoWay}"
+          IsVisible="True"
+          Grid.Row="1"
+          Grid.Column="0" />
+      <vlcSharp:VideoView x:Name="VideoView1"
+          MediaPlayer="{Binding MediaPlayerOne, Mode=TwoWay}"
+          IsVisible="True"
+          Grid.Row="1"
+          Grid.Column="1" />
+      <vlcSharp:VideoView x:Name="VideoView2"
+          MediaPlayer="{Binding MediaPlayerTwo, Mode=TwoWay}"
+          IsVisible="True"
+          Grid.Row="1"
+          Grid.Column="2" />
+      
+      <vlcSharp:VideoView x:Name="VideoView3"
+          MediaPlayer="{Binding MediaPlayerThree, Mode=TwoWay}"
+          IsVisible="True"
+          Grid.Row="2"
+          Grid.Column="0" />
+      <vlcSharp:VideoView x:Name="VideoView4"
+          MediaPlayer="{Binding MediaPlayerFour, Mode=TwoWay}"
+          IsVisible="True"
+          Grid.Row="2"
+          Grid.Column="1" />
+      <vlcSharp:VideoView x:Name="VideoView5"
+          MediaPlayer="{Binding MediaPlayerFive, Mode=TwoWay}"
+          IsVisible="True"
+          Grid.Row="2"
+          Grid.Column="2" />
+
+    </Grid>
+  
+
+</Window>
