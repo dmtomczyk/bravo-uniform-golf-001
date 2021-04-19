@@ -16,5 +16,6 @@
     <PackageReference Include="LibVLCSharp" Version="3.5.0" />
     <PackageReference Include="LibVLCSharp.Avalonia" Version="3.5.0" />
     <PackageReference Include="MessageBox.Avalonia" Version="1.1.1" />
+    <PackageReference Include="VideoLAN.LibVLC.Windows" Version="3.0.12" />
   </ItemGroup>
 </Project>
