@@ -10,6 +10,7 @@ namespace LibVLC_VideoView_Bug_Repro
     {
         public override void Initialize()
         {
+            LibVLCSharp.Shared.Core.Initialize();
             AvaloniaXamlLoader.Load(this);
         }
 
