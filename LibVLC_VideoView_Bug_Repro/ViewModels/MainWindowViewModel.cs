@@ -84,8 +84,6 @@ namespace LibVLC_VideoView_Bug_Repro.ViewModels
 
         public void StartCommand(Grid theGrid)
         {
-            WriteLine("*** Start Command Executing ***", ConsoleColor.Red);
-            
             try
             {
                 LibVLCSharp.Shared.Core.Initialize();
@@ -124,33 +122,5 @@ namespace LibVLC_VideoView_Bug_Repro.ViewModels
         
         #endregion
         
-        #region Helper Methods
-
-        private static void Write(string message, ConsoleColor color = ConsoleColor.White)
-        {
-            // Change to param.
-            Console.ForegroundColor = color;
-
-            // WriteLine
-            Console.Write(message);
-
-            // Reset to default
-            Console.ForegroundColor = ConsoleColor.Gray;
-        }
-
-        private static void WriteLine(string message, ConsoleColor color = ConsoleColor.White)
-        {
-            // Change to param.
-            Console.ForegroundColor = color;
-
-            // WriteLine
-            Console.WriteLine(message);
-
-            // Reset to default
-            Console.ForegroundColor = ConsoleColor.Gray;
-        }
-
-        #endregion
-
     }
 }
