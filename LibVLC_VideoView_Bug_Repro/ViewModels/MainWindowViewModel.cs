@@ -17,65 +17,25 @@ namespace LibVLC_VideoView_Bug_Repro.ViewModels
         public MainWindowViewModel()
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         {
-            LibVLCZero = new LibVLC();
-            LibVLCOne = new LibVLC();
-            LibVLCTwo = new LibVLC();
-            LibVLCThree = new LibVLC();
-            LibVLCFour = new LibVLC();
-            LibVLCFive = new LibVLC();
+            LibVLC = new LibVLC();
 
-            MediaPlayerZero = new MediaPlayer(LibVLCZero);
-            MediaPlayerOne = new MediaPlayer(LibVLCOne);
-            MediaPlayerTwo = new MediaPlayer(LibVLCTwo);
-            MediaPlayerThree = new MediaPlayer(LibVLCThree);
-            MediaPlayerFour = new MediaPlayer(LibVLCFour);
-            MediaPlayerFive = new MediaPlayer(LibVLCFive);
+            MediaPlayerZero = new MediaPlayer(LibVLC);
+            MediaPlayerOne = new MediaPlayer(LibVLC);
+            MediaPlayerTwo = new MediaPlayer(LibVLC);
+            MediaPlayerThree = new MediaPlayer(LibVLC);
+            MediaPlayerFour = new MediaPlayer(LibVLC);
+            MediaPlayerFive = new MediaPlayer(LibVLC);
         }
 
         #region Properties
 
-        private LibVLC _libVLCSix;
-        public LibVLC LibVLCZero
+        private LibVLC _libVLC;
+        public LibVLC LibVLC
         {
-            get => _libVLCSix;
-            set => this.RaiseAndSetIfChanged(ref _libVLCSix, value);
+            get => _libVLC;
+            set => this.RaiseAndSetIfChanged(ref _libVLC, value);
         }
 
-        private LibVLC _libVLCOne;
-        public LibVLC LibVLCOne
-        {
-            get => _libVLCOne;
-            set => this.RaiseAndSetIfChanged(ref _libVLCOne, value);
-        }
-
-        private LibVLC _libVLCTwo;
-        public LibVLC LibVLCTwo
-        {
-            get => _libVLCTwo;
-            set => this.RaiseAndSetIfChanged(ref _libVLCTwo, value);
-        }
-        
-        private LibVLC _libVLCThree;
-        public LibVLC LibVLCThree
-        {
-            get => _libVLCThree;
-            set => this.RaiseAndSetIfChanged(ref _libVLCThree, value);
-        }
-        
-        private LibVLC _libVLCFour;
-        public LibVLC LibVLCFour
-        {
-            get => _libVLCFour;
-            set => this.RaiseAndSetIfChanged(ref _libVLCFour, value);
-        }
-        
-        private LibVLC _libVLCFive;
-        public LibVLC LibVLCFive
-        {
-            get => _libVLCFive;
-            set => this.RaiseAndSetIfChanged(ref _libVLCFive, value);
-        }
-        
         private MediaPlayer _mediaPlayerZero;
         public MediaPlayer MediaPlayerZero
         {
@@ -118,13 +78,6 @@ namespace LibVLC_VideoView_Bug_Repro.ViewModels
             set => this.RaiseAndSetIfChanged(ref _mediaPlayerFive, value);
         }
 
-        private string _errors = "No Errors!";
-        public string Errors
-        {
-            get => _errors;
-            set => this.RaiseAndSetIfChanged(ref _errors, value);
-        }
-
         #endregion
 
         #region Commands
@@ -137,12 +90,12 @@ namespace LibVLC_VideoView_Bug_Repro.ViewModels
             {
                 LibVLCSharp.Shared.Core.Initialize();
 
-                var media0 = new Media(LibVLCZero, "v4l2:///dev/video0", FromType.FromLocation);
-                var media1 = new Media(LibVLCOne, "v4l2:///dev/video1", FromType.FromLocation);
-                var media2 = new Media(LibVLCTwo, "v4l2:///dev/video2", FromType.FromLocation);
-                var media3 = new Media(LibVLCThree, "v4l2:///dev/video3", FromType.FromLocation);
-                var media4 = new Media(LibVLCFour, "v4l2:///dev/video4", FromType.FromLocation);
-                var media5 = new Media(LibVLCFive, "v4l2:///dev/video5", FromType.FromLocation);
+                var media0 = new Media(LibVLC, new Uri("http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"));
+                var media1 = new Media(LibVLC, new Uri("http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"));
+                var media2 = new Media(LibVLC, new Uri("http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"));
+                var media3 = new Media(LibVLC, new Uri("http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"));
+                var media4 = new Media(LibVLC, new Uri("http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"));
+                var media5 = new Media(LibVLC, new Uri("http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"));
 
                 Controls allControls = theGrid.Children;
 
