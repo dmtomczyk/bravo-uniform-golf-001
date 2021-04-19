@@ -6,6 +6,7 @@
 3. Ensure you have the platform specific LibVLC (`sudo apt install libvlc-dev`)
 4. Execute with .NET 5 (usually via `dotnet LibVLC_VideoView_Bug_Repro.dll`)
 
+## Windows Build
 1. Clone the repository
 2. Restore packages
 3. Execute the application via VS or .exe
